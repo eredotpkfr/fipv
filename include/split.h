@@ -32,36 +32,36 @@
 
 #define DEFAULT_BUFFER_SIZE 8
 
-#include <string.h>
-#include "xalloc.h"
 #include "types.h"
+#include "xalloc.h"
+#include <string.h>
 
 struct split_t split(char *target_str, char *delimiters);
 void free_split(struct split_t *split_ptr);
 bool free_split_r(struct split_t *p, bool ret);
 
 struct split_t split(char *target_str, char *delimiters) {
-    struct split_t ret = {0, NULL};
-    size_t buffer_size = DEFAULT_BUFFER_SIZE;
-    size_t temp = 0;
+  struct split_t ret = {0, NULL};
+  size_t buffer_size = DEFAULT_BUFFER_SIZE;
+  size_t temp = 0;
 
-    ret.tokens = (char **)xcalloc(buffer_size, sizeof(char *));
+  ret.tokens = (char **)xcalloc(buffer_size, sizeof(char *));
 
-    while (true) {
-        target_str += strspn(target_str, delimiters);
-        temp = strcspn(target_str, delimiters);
+  while (true) {
+    target_str += strspn(target_str, delimiters);
+    temp = strcspn(target_str, delimiters);
 
-        if (!temp)
-            break;
+    if (!temp)
+      break;
 
-        if (ret.length >= buffer_size) {
-          buffer_size += DEFAULT_BUFFER_SIZE;
-          ret.tokens = (char **)xrealloc(ret.tokens, buffer_size * sizeof(char *));
-        }
+    if (ret.length >= buffer_size) {
+      buffer_size += DEFAULT_BUFFER_SIZE;
+      ret.tokens = (char **)xrealloc(ret.tokens, buffer_size * sizeof(char *));
+    }
 
-        ret.tokens[ret.length] = strndup(target_str, temp);
-        ret.length++;
-        target_str += temp;
+    ret.tokens[ret.length] = strndup(target_str, temp);
+    ret.length++;
+    target_str += temp;
   }
 
   return ret;

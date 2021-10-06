@@ -42,31 +42,31 @@
 
 #include <stdlib.h> /* for allocating operations */
 
-void * xmem_err(void *p);
-void * xmalloc(size_t size);
-void * xrealloc(void *target, size_t new_size);
-void * xcalloc(size_t count, size_t size);
+void *xmem_err(void *p);
+void *xmalloc(size_t size);
+void *xrealloc(void *target, size_t new_size);
+void *xcalloc(size_t count, size_t size);
 
-void * xmem_err(void *p) {
-    if (!p) {
-      fprintf(stderr, MEMORY_ERR);
-      exit(EXIT_FAILURE); /* 1 */
-    }
-    return p;
+void *xmem_err(void *p) {
+  if (!p) {
+    fprintf(stderr, MEMORY_ERR);
+    exit(EXIT_FAILURE); /* 1 */
+  }
+  return p;
 }
 
-void * xmalloc(size_t size) {
+void *xmalloc(size_t size) {
   void *pointer = xmem_err(malloc(size));
   memset(pointer, 0, size); /* set zero values */
 
   return pointer;
 }
 
-void * xrealloc(void *target, size_t new_size) {
+void *xrealloc(void *target, size_t new_size) {
   return xmem_err(realloc(target, new_size));
 }
 
-void * xcalloc(size_t count, size_t size) {
+void *xcalloc(size_t count, size_t size) {
   return xmem_err(calloc(count, size));
 }
 

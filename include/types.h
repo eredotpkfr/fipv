@@ -9,8 +9,8 @@
 
 // Struct type definition for store splitted results
 typedef struct split_t {
-    size_t length; /* splitted tokens length */
-    char **tokens; /* tokenizer */
+  size_t length; /* splitted tokens length */
+  char **tokens; /* tokenizer */
 } split_t;
 
 #endif

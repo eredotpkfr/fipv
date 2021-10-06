@@ -36,33 +36,33 @@ bool is_xdigit(char *target_str);
 int blanks(char *target_str, char delimiter);
 
 bool is_digit(char *target_str) {
-    for(size_t i = 0; i < strlen(target_str); i++) {
-        if (!isdigit(target_str[i]))
-            return false;
-    }
-    return true;
+  for (size_t i = 0; i < strlen(target_str); i++) {
+    if (!isdigit(target_str[i]))
+      return false;
+  }
+  return true;
 }
 
 bool is_xdigit(char *target_str) {
-    for(size_t i = 0; i < strlen(target_str); i++) {
-        if (!isxdigit(target_str[i]))
-            return false;
-    }
-    return true;
+  for (size_t i = 0; i < strlen(target_str); i++) {
+    if (!isxdigit(target_str[i]))
+      return false;
+  }
+  return true;
 }
 
 int blanks(char *target_str, char delimiter) {
-    int counter = 0;
+  int counter = 0;
 
-    for(size_t i = 0; i < strlen(target_str); i++) {
-        if (target_str[i] != delimiter)
-            continue;
+  for (size_t i = 0; i < strlen(target_str); i++) {
+    if (target_str[i] != delimiter)
+      continue;
 
-        if (target_str[i] == target_str[i + 1])
-            counter++;
-    }
+    if (target_str[i] == target_str[i + 1])
+      counter++;
+  }
 
-    return !counter ? counter : counter + 1;
+  return !counter ? counter : counter + 1;
 }
 
 #endif

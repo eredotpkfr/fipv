@@ -75,7 +75,10 @@ static PyMethodDef ModuleFuncs[] = {
 };
 
 static struct PyModuleDef fipv = {
-    PyModuleDef_HEAD_INIT, "fipv", "Fast IP validator with C language as a python module", -1,
+    PyModuleDef_HEAD_INIT,
+    "fipv",
+    "Fast IP validator with C language as a python module",
+    -1,
     ModuleFuncs,
 };
 
