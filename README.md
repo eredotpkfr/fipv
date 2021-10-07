@@ -60,25 +60,29 @@ In this test, it was tested validation speed and average RAM usage with differen
   </thead>
   <tbody>
     <tr>
-      <th align="center" rowspan="3" scope="rowgroup" >1</th>
-      <th align="center" scope="row" style="font-size: 12px;">:green_circle:</th>
-      <td align="center" style="font-size: 12px; ">500K</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">1M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">IPv4</td>
-      <td align="center"><a href="https://github.com/kvesteri/validators" target="_blank">validators</a></td>
+      <th align="center" rowspan="3" scope="rowgroup">1</th>
+      <th align="center" scope="row">:green_circle:</th>
+      <td align="center">500K</td>
+      <td align="center" rowspan="3">1M</td>
+      <td align="center" rowspan="3">IPv4</td>
+      <td align="center">
+        <a href="https://github.com/kvesteri/validators" target="_blank">validators</a>
+      </td>
       <td align="center">0m12,975s</td>
       <td align="center">85M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">:red_circle:</th>
-      <td align="center" style="font-size: 12px; ">500K</td>
-      <td align="center"><a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a></td>
+      <th align="center" scope="row">:red_circle:</th>
+      <td align="center">500K</td>
+      <td align="center">
+        <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
+      </td>
       <td align="center">0m2,007s</td>
       <td align="center">80M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">N/A</th>
-      <td align="center" style="font-size: 12px; ">N/A</td>
+      <th align="center" scope="row">N/A</th>
+      <td align="center">N/A</td>
       <td align="center">fipv</td>
       <td align="center">0m0,635s</td>
       <td align="center">76M</td>
@@ -86,25 +90,29 @@ In this test, it was tested validation speed and average RAM usage with differen
   </tbody>
   <tbody>
     <tr>
-      <th align="center" rowspan="3" scope="rowgroup" >2</th>
-      <th align="center" scope="row" style="font-size: 12px;">:green_circle:</th>
-      <td align="center" style="font-size: 12px; ">1M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">2M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">IPv4</td>
-      <td align="center"><a href="https://github.com/kvesteri/validators" target="_blank">validators</a></td>
+      <th align="center" rowspan="3" scope="rowgroup">2</th>
+      <th align="center" scope="row">:green_circle:</th>
+      <td align="center">1M</td>
+      <td align="center" rowspan="3">2M</td>
+      <td align="center" rowspan="3">IPv4</td>
+      <td align="center">
+        <a href="https://github.com/kvesteri/validators" target="_blank">validators</a>
+      </td>
       <td align="center">0m25,682s</td>
       <td align="center">151M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">:red_circle:</th>
-      <td align="center" style="font-size: 12px; ">1M</td>
-      <td align="center"><a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a></td>
+      <th align="center" scope="row">:red_circle:</th>
+      <td align="center">1M</td>
+      <td align="center">
+        <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
+      </td>
       <td align="center">0m3,937s</td>
       <td align="center">154M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">N/A</th>
-      <td align="center" style="font-size: 12px; ">N/A</td>
+      <th align="center" scope="row">N/A</th>
+      <td align="center">N/A</td>
       <td align="center">fipv</td>
       <td align="center">0m1,193s</td>
       <td align="center">150M</td>
@@ -112,25 +120,29 @@ In this test, it was tested validation speed and average RAM usage with differen
   </tbody>
   <tbody>
     <tr>
-      <th align="center" rowspan="3" scope="rowgroup" >3</th>
-      <th align="center" scope="row" style="font-size: 12px;">:green_circle:</th>
-      <td align="center" style="font-size: 12px; ">500K</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">1M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">IPv4 CIDR</td>
-      <td align="center"><a href="https://github.com/kvesteri/validators" target="_blank">validators</a></td>
+      <th align="center" rowspan="3" scope="rowgroup">3</th>
+      <th align="center" scope="row">:green_circle:</th>
+      <td align="center">500K</td>
+      <td align="center" rowspan="3">1M</td>
+      <td align="center" rowspan="3">IPv4 CIDR</td>
+      <td align="center">
+        <a href="https://github.com/kvesteri/validators" target="_blank">validators</a>
+      </td>
       <td align="center">0m19,721s</td>
       <td align="center">96M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">:red_circle:</th>
-      <td align="center" style="font-size: 12px; ">500K</td>
-      <td align="center"><a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a></td>
+      <th align="center" scope="row">:red_circle:</th>
+      <td align="center">500K</td>
+      <td align="center">
+        <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
+      </td>
       <td align="center">0m8,662s</td>
       <td align="center">89M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">N/A</th>
-      <td align="center" style="font-size: 12px; ">N/A</td>
+      <th align="center" scope="row">N/A</th>
+      <td align="center">N/A</td>
       <td align="center">fipv</td>
       <td align="center">0m0,909s</td>
       <td align="center">77M</td>
@@ -138,25 +150,29 @@ In this test, it was tested validation speed and average RAM usage with differen
   </tbody>
   <tbody>
     <tr>
-      <th align="center" rowspan="3" scope="rowgroup" >4</th>
-      <th align="center" scope="row" style="font-size: 12px;">:green_circle:</th>
-      <td align="center" style="font-size: 12px; ">1M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">2M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">IPv4 CIDR</td>
-      <td align="center"><a href="https://github.com/kvesteri/validators" target="_blank">validators</a></td>
+      <th align="center" rowspan="3" scope="rowgroup">4</th>
+      <th align="center" scope="row">:green_circle:</th>
+      <td align="center">1M</td>
+      <td align="center" rowspan="3">2M</td>
+      <td align="center" rowspan="3">IPv4 CIDR</td>
+      <td align="center">
+        <a href="https://github.com/kvesteri/validators" target="_blank">validators</a>
+      </td>
       <td align="center">0m39,457s</td>
       <td align="center">179M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">:red_circle:</th>
-      <td align="center" style="font-size: 12px; ">1M</td>
-      <td align="center"><a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a></td>
+      <th align="center" scope="row">:red_circle:</th>
+      <td align="center">1M</td>
+      <td align="center">
+        <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
+      </td>
       <td align="center">0m17,029s</td>
       <td align="center">174M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">N/A</th>
-      <td align="center" style="font-size: 12px; ">N/A</td>
+      <th align="center" scope="row">N/A</th>
+      <td align="center">N/A</td>
       <td align="center">fipv</td>
       <td align="center">0m1,779s</td>
       <td align="center">174M</td>
@@ -164,25 +180,29 @@ In this test, it was tested validation speed and average RAM usage with differen
   </tbody>
   <tbody>
     <tr>
-      <th align="center" rowspan="3" scope="rowgroup" >5</th>
-      <th align="center" scope="row" style="font-size: 12px;">:green_circle:</th>
-      <td align="center" style="font-size: 12px; ">500K</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">1M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">IPv6</td>
-      <td align="center"><a href="https://github.com/kvesteri/validators" target="_blank">validators</a></td>
+      <th align="center" rowspan="3" scope="rowgroup">5</th>
+      <th align="center" scope="row">:green_circle:</th>
+      <td align="center">500K</td>
+      <td align="center" rowspan="3">1M</td>
+      <td align="center" rowspan="3">IPv6</td>
+      <td align="center">
+        <a href="https://github.com/kvesteri/validators" target="_blank">validators</a>
+      </td>
       <td align="center">0m12,633s</td>
       <td align="center">96M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">:red_circle:</th>
-      <td align="center" style="font-size: 12px; ">500K</td>
-      <td align="center"><a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a></td>
+      <th align="center" scope="row">:red_circle:</th>
+      <td align="center">500K</td>
+      <td align="center">
+        <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
+      </td>
       <td align="center">0m2,802s</td>
       <td align="center">92M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">N/A</th>
-      <td align="center" style="font-size: 12px; ">N/A</td>
+      <th align="center" scope="row">N/A</th>
+      <td align="center">N/A</td>
       <td align="center">fipv</td>
       <td align="center">0m0,684s</td>
       <td align="center">87M</td>
@@ -190,25 +210,29 @@ In this test, it was tested validation speed and average RAM usage with differen
   </tbody>
   <tbody>
     <tr>
-      <th align="center" rowspan="3" scope="rowgroup" >6</th>
-      <th align="center" scope="row" style="font-size: 12px;">:green_circle:</th>
-      <td align="center" style="font-size: 12px; ">1M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">2M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">IPv6</td>
-      <td align="center"><a href="https://github.com/kvesteri/validators" target="_blank">validators</a></td>
+      <th align="center" rowspan="3" scope="rowgroup">6</th>
+      <th align="center" scope="row">:green_circle:</th>
+      <td align="center">1M</td>
+      <td align="center" rowspan="3">2M</td>
+      <td align="center" rowspan="3">IPv6</td>
+      <td align="center">
+        <a href="https://github.com/kvesteri/validators" target="_blank">validators</a>
+      </td>
       <td align="center">0m26,449s</td>
       <td align="center">183M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">:red_circle:</th>
-      <td align="center" style="font-size: 12px; ">1M</td>
-      <td align="center"><a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a></td>
+      <th align="center" scope="row">:red_circle:</th>
+      <td align="center">1M</td>
+      <td align="center">
+        <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
+      </td>
       <td align="center">0m5,605s</td>
       <td align="center">177M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">N/A</th>
-      <td align="center" style="font-size: 12px; ">N/A</td>
+      <th align="center" scope="row">N/A</th>
+      <td align="center">N/A</td>
       <td align="center">fipv</td>
       <td align="center">0m1,308s</td>
       <td align="center">172M</td>
@@ -216,25 +240,29 @@ In this test, it was tested validation speed and average RAM usage with differen
   </tbody>
   <tbody>
     <tr>
-      <th align="center" rowspan="3" scope="rowgroup" >7</th>
-      <th align="center" scope="row" style="font-size: 12px;">:green_circle:</th>
-      <td align="center" style="font-size: 12px; ">500K</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">1M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">IPv6 CIDR</td>
-      <td align="center"><a href="https://github.com/kvesteri/validators" target="_blank">validators</a></td>
+      <th align="center" rowspan="3" scope="rowgroup">7</th>
+      <th align="center" scope="row">:green_circle:</th>
+      <td align="center">500K</td>
+      <td align="center" rowspan="3">1M</td>
+      <td align="center" rowspan="3">IPv6 CIDR</td>
+      <td align="center">
+        <a href="https://github.com/kvesteri/validators" target="_blank">validators</a>
+      </td>
       <td align="center">0m20,936s</td>
       <td align="center">99M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">:red_circle:</th>
-      <td align="center" style="font-size: 12px; ">500K</td>
-      <td align="center"><a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a></td>
+      <th align="center" scope="row">:red_circle:</th>
+      <td align="center">500K</td>
+      <td align="center">
+        <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
+      </td>
       <td align="center">0m10,778s</td>
       <td align="center">95M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">N/A</th>
-      <td align="center" style="font-size: 12px; ">N/A</td>
+      <th align="center" scope="row">N/A</th>
+      <td align="center">N/A</td>
       <td align="center">fipv</td>
       <td align="center">0m0,958s</td>
       <td align="center">93M</td>
@@ -242,25 +270,29 @@ In this test, it was tested validation speed and average RAM usage with differen
   </tbody>
   <tbody>
     <tr>
-      <th align="center" rowspan="3" scope="rowgroup" >8</th>
-      <th align="center" scope="row" style="font-size: 12px;">:green_circle:</th>
-      <td align="center" style="font-size: 12px; ">1M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">2M</td>
-      <td align="center" style="font-size: 15px; " rowspan="3">IPv6 CIDR</td>
-      <td align="center"><a href="https://github.com/kvesteri/validators" target="_blank">validators</a></td>
+      <th align="center" rowspan="3" scope="rowgroup">8</th>
+      <th align="center" scope="row">:green_circle:</th>
+      <td align="center">1M</td>
+      <td align="center" rowspan="3">2M</td>
+      <td align="center" rowspan="3">IPv6 CIDR</td>
+      <td align="center">
+        <a href="https://github.com/kvesteri/validators" target="_blank">validators</a>
+      </td>
       <td align="center">0m51,382s</td>
       <td align="center">184M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">:red_circle:</th>
-      <td align="center" style="font-size: 12px; ">1M</td>
-      <td align="center"><a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a></td>
+      <th align="center" scope="row">:red_circle:</th>
+      <td align="center">1M</td>
+      <td align="center">
+        <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
+      </td>
       <td align="center">0m25,563s</td>
       <td align="center">184M</td>
     </tr>
     <tr>
-      <th align="center" scope="row" style="font-size: 12px;">N/A</th>
-      <td align="center" style="font-size: 12px; ">N/A</td>
+      <th align="center" scope="row">N/A</th>
+      <td align="center">N/A</td>
       <td align="center">fipv</td>
       <td align="center">0m1,862s</td>
       <td align="center">168M</td>
