@@ -5,7 +5,7 @@
 [![Stars](https://img.shields.io/github/stars/eredotpkfr/fipv?style=social)](https://github.com/eredotpkfr/fipv/stargazers)
 
 # fipv
-`fipv` is a python package build with `C` language. Simply it includes basic IP address validator functions as a `C` function, so works faster than others. Following `C` functions avaliable on this package:
+`fipv` (fast ip validator) is a python package build with `C` language. Simply it includes basic IP address validator functions as a `C` function, so works faster than others. Following `C` functions avaliable on this package:
 - ipv4
 - ipv4_cidr
 - ipv6
