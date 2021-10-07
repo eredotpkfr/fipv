@@ -24,6 +24,22 @@
  * target_str: target string (char *)
  * delimiter: delimiter character (char)
  * returns: returns count of empty strings (int)
+ *
+ * Function: startswith
+ * ----------------------------
+ * Returns true if the given string startswith given character
+ *
+ * target_str: target string (char *)
+ * chr: comparing character (char)
+ * returns: returns true if target_str startswith chr (bool)
+ *
+ * Function: endswith
+ * ----------------------------
+ * Returns true if the given string endswith given character
+ *
+ * target_str: target string (char *)
+ * chr: comparing character (char)
+ * returns: returns true if target_str endswith chr (bool)
  */
 
 #ifndef _UTILS_H_
@@ -33,7 +49,23 @@
 
 bool is_digit(char *target_str);
 bool is_xdigit(char *target_str);
+bool startswith(char *target_str, char chr);
+bool endswith(char *target_str, char chr);
 int blanks(char *target_str, char delimiter);
+
+bool startswith(char *target_str, char chr) {
+  if (!target_str)
+    return false;
+
+  return target_str[0] == chr;
+}
+
+bool endswith(char *target_str, char chr) {
+  if (!target_str)
+    return false;
+
+  return target_str[strlen(target_str) - 1] == chr;
+}
 
 bool is_digit(char *target_str) {
   for (size_t i = 0; i < strlen(target_str); i++) {

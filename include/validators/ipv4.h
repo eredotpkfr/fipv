@@ -20,6 +20,7 @@
 #define _IPV4_H_
 
 #define IPV4_DELIMITER "."
+#define IPV4_DELIMITER_CHAR '.'
 #define IP_CIDR_DELIMITER "/"
 
 #include "split.h"
@@ -29,9 +30,14 @@ bool is_ipv4(char *ipv4_addr);
 bool is_ipv4_cidr(char *ipv4_addr_cidr);
 
 bool is_ipv4(char *ipv4_addr) {
-  struct split_t splitted = split(ipv4_addr, IPV4_DELIMITER);
+  if (startswith(ipv4_addr, IPV4_DELIMITER_CHAR) ||
+      endswith(ipv4_addr, IPV4_DELIMITER_CHAR))
+    return false;
 
-  if (splitted.length != 4)
+  struct split_t splitted = split(ipv4_addr, IPV4_DELIMITER);
+  int blank_counts = blanks(ipv4_addr, IPV4_DELIMITER_CHAR);
+
+  if (splitted.length + blank_counts != 4)
     return free_split_r(&splitted, false);
 
   for (size_t i = 0; i < splitted.length; i++) {
