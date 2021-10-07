@@ -3,7 +3,7 @@
 [![Release](https://img.shields.io/github/v/release/eredotpkfr/fipv)](https://www.github.com/eredotpkfr/fipv/releases/latest)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fipv)
 [![License: MIT](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
-[![Stars](https://img.shields.io/github/stars/eredotpkfr/fipv?style=social)](https://www.github.com/eredotpkfr/fipv)
+[![Stars](https://img.shields.io/github/stars/eredotpkfr/fipv?style=social)](https://github.com/eredotpkfr/fipv/stargazers)
 
 # fipv
 `fipv` is a python package build with `C` language. Simply it includes basic IP address validator functions as a `C` function, so works faster than others. Following `C` functions avaliable on this package:
