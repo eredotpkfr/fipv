@@ -1,3 +1,6 @@
+[![Test](https://github.com/eredotpkfr/fipv/actions/workflows/python-package-test.yml/badge.svg)](https://github.com/eredotpkfr/fipv/actions/workflows/python-package-test.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
+
 # fipv
 `fipv` is a python package build with `C` language. Simply it includes basic IP address validator functions as a `C` function, so works faster than others. Following `C` functions avaliable on this package:
 - ipv4
