@@ -15,7 +15,7 @@ import fipv
 class TestFipv(TestCase):
     """Main module test class"""
 
-    def _global_test_func(self, cases: dict, validator: Callable):
+    def _global_test_func(self, cases: dict, validator: Callable) -> None:
         """
         Global test function, other methods uses it. Simply does
         test by given cases and validator.
