@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install required C packages
+      uses: actions/checkout@v3
       run: |
         cat docs/requirements.txt | xargs pip3 install
 
