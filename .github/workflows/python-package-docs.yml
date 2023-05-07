@@ -9,7 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Install required C packages
-      run: cat docs/requirements.txt | xargs pip3 install
+      run: |
+        cat docs/requirements.txt | xargs pip3 install
 
     - id: deployment
       uses: sphinx-notes/pages@v3
