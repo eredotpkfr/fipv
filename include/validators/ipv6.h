@@ -1,21 +1,3 @@
-/*
- * IPv6 validator functions definition.
- *
- * Function: is_ipv6
- * ----------------------------
- * Returns true if given string is a IPv6 otherwise false.
- *
- * ipv6_addr: target string to be validated (char *)
- * returns: true if given address is a IPv6 address (bool)
- *
- * Function: is_ipv6_cidr
- * ----------------------------
- * Returns true if given string is a IPv6CIDR otherwise false.
- *
- * ipv6_addr_cidr: target string to be validated (char *)
- * returns: true if given address is a IPv6CIDR (bool)
- */
-
 #ifndef _IPV6_H_
 #define _IPV6_H_
 
@@ -31,6 +13,15 @@
 bool is_ipv6(char *ipv6_addr);
 bool is_ipv6_cidr(char *ipv6_addr_cidr);
 
+/**
+ * Returns ``true`` if given string is a IPv6 otherwise ``false``.
+ *
+ * Args:
+ *     ipv6_addr(char *): target string to be validated
+ *
+ * Returns:
+ *     ``true`` if given address is a IPv6 address
+ */
 bool is_ipv6(char *ipv6_addr) {
   struct split_t ipv6_groups;
   struct split_t ipv4_groups;
@@ -104,6 +95,15 @@ bool is_ipv6(char *ipv6_addr) {
   return free_split_r(&ipv6_groups, false);
 }
 
+/**
+ * Returns ``true`` if given string is a IPv6CIDR otherwise ``false``.
+ *
+ * Args:
+ *     ipv6_addr_cidr(char *): target string to be validated
+ *
+ * Returns:
+ *     ``true`` if given address is a IPv6CIDR
+ */
 bool is_ipv6_cidr(char *ipv6_addr_cidr) {
   struct split_t splitted = split(ipv6_addr_cidr, IP_CIDR_DELIMITER);
 

@@ -1,0 +1,5 @@
+sphinx==6.2.0
+sphinx-c-autodoc==1.1.1
+furo==2023.3.27
+m2r2==0.3.3.post2
+libclang==16.0.0

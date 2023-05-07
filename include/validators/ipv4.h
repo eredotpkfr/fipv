@@ -1,21 +1,3 @@
-/*
- * IPv4 validator functions definition.
- *
- * Function: is_ipv4
- * ----------------------------
- * Returns true if given string is a IPv4 otherwise false.
- *
- * ipv4_addr: target string to be validated (char *)
- * returns: true if given address is a IPv4 address (bool)
- *
- * Function: is_ipv4_cidr
- * ----------------------------
- * Returns true if given string is a IPv4CIDR otherwise false.
- *
- * ipv4_addr_cidr: target string to be validated (char *)
- * returns: true if given address is a IPv4CIDR (bool)
- */
-
 #ifndef _IPV4_H_
 #define _IPV4_H_
 
@@ -29,6 +11,15 @@
 bool is_ipv4(char *ipv4_addr);
 bool is_ipv4_cidr(char *ipv4_addr_cidr);
 
+/**
+ * Returns ``true`` if given string is a IPv4 otherwise ``false``.
+ *
+ * Args:
+ *     ipv4_addr(char *): target string to be validated
+ *
+ * Returns:
+ *     ``true`` if given address is a IPv4 address
+ */
 bool is_ipv4(char *ipv4_addr) {
   if (startswith(ipv4_addr, IPV4_DELIMITER_CHAR) ||
       endswith(ipv4_addr, IPV4_DELIMITER_CHAR))
@@ -53,6 +44,15 @@ bool is_ipv4(char *ipv4_addr) {
   return free_split_r(&splitted, true);
 }
 
+/**
+ * Returns ``true`` if given string is a IPv4CIDR otherwise ``false``.
+ *
+ * Args:
+ *     ipv4_addr_cidrr(char *): target string to be validated
+ *
+ * Returns:
+ *     ``true`` if given address is a IPv4CIDR
+ */
 bool is_ipv4_cidr(char *ipv4_addr_cidr) {
   struct split_t splitted = split(ipv4_addr_cidr, IP_CIDR_DELIMITER);
 
