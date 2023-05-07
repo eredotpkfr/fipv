@@ -8,10 +8,10 @@ jobs:
   pages:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/setup-python@v3
+    - uses: actions/checkout@v3
     - name: Install C lang packages
       run: |
-        pip3 install Sphinx==6.2.0
+        pip3 install sphinx
         pip3 install -r docs/requirements.txt
         sphinx-build docs / || true
         pip3 install --force libclang==16.0.0
