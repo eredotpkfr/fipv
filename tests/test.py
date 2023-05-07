@@ -7,6 +7,7 @@ Main test file, fipv module tests
 
 from typing import Callable
 from unittest import TestCase, main
+
 from cases import IPV4_CASES, IPV4_CIDR_CASES, IPV6_CASES, IPV6_CIDR_CASES
 
 import fipv

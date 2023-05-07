@@ -1,4 +1,4 @@
-/*
+/**
  * Author: eredotpkfr
  * Purpose: Implementing fast IP validators with C language.
  * Language:  C
@@ -18,6 +18,18 @@ static PyObject *ipv6(PyObject *self, PyObject *args);
 static PyObject *ipv6_cidr(PyObject *self, PyObject *args);
 PyMODINIT_FUNC PyInit_fipv(void);
 
+/**
+ * Module function for validating IPv4 values.
+ *
+ * Args:
+ *     self(PyObject *): the module itself
+ *     args(PyObject *): function arguments as a python object
+ *
+ * Returns:
+ *     Python boolean object, ``True`` if value is a valid IPv4
+ *         otherwise returns ``False``
+ *
+ */
 static PyObject *ipv4(PyObject *self, PyObject *args) {
   char *ipv4_addr;
 
@@ -30,6 +42,18 @@ static PyObject *ipv4(PyObject *self, PyObject *args) {
   Py_RETURN_FALSE;
 }
 
+/**
+ * Module function for validating IPv4 CIDR values.
+ *
+ * Args:
+ *     self(PyObject *): the module itself
+ *     args(PyObject *): function arguments as a python object
+ *
+ * Returns:
+ *     Python boolean object, ``True`` if value is a valid IPv4 CIDR
+ *         otherwise returns ``False``
+ *
+ */
 static PyObject *ipv4_cidr(PyObject *self, PyObject *args) {
   char *ipv4_addr_cidr;
 
@@ -42,6 +66,18 @@ static PyObject *ipv4_cidr(PyObject *self, PyObject *args) {
   Py_RETURN_FALSE;
 }
 
+/**
+ * Module function for validating IPv6 values.
+ *
+ * Args:
+ *     self(PyObject *): the module itself
+ *     args(PyObject *): function arguments as a python object
+ *
+ * Returns:
+ *     Python boolean object, ``True`` if value is a valid IPv6
+ *         otherwise returns ``False``
+ *
+ */
 static PyObject *ipv6(PyObject *self, PyObject *args) {
   char *ipv6_addr;
 
@@ -54,6 +90,18 @@ static PyObject *ipv6(PyObject *self, PyObject *args) {
   Py_RETURN_FALSE;
 }
 
+/**
+ * Module function for validating IPv6 CIDR values.
+ *
+ * Args:
+ *     self(PyObject *): the module itself
+ *     args(PyObject *): function arguments as a python object
+ *
+ * Returns:
+ *     Python boolean object, ``True`` if value is a valid IPv6 CIDR
+ *         otherwise returns ``False``
+ *
+ */
 static PyObject *ipv6_cidr(PyObject *self, PyObject *args) {
   char *ipv6_addr_cidr;
 

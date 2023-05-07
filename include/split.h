@@ -1,32 +1,3 @@
-/*
- * Split header file for split operations.
- *
- * Function: split
- * ----------------------------
- * Basically it splits dynamically given string.
- *
- * target_str: target string to be splitted (char *)
- * delimiters: list of delimiter characters as a char pointer (char *)
- * returns: returns splitted results as a split_t type (struct split_t)
- *
- * Function: free_split
- * ----------------------------
- * Deallocate any type of split_t object.
- *
- * split_ptr: target address of split_t object (struct split_t *)
- * returns: no returns
- *
- * Function: free_split_r
- * ----------------------------
- * Reentrant function for free_split. The "_r" indicates
- * that. Basically it frees given split_t pointer address
- * (uses free_split) and returns given return value.
- *
- * p: target address of split_t object (struct split_t *)
- * ret: return value as a bool (bool)
- * returns: returns directly given ret value (bool)
- */
-
 #ifndef _SPLIT_H_
 #define _SPLIT_H_
 
@@ -40,6 +11,16 @@ struct split_t split(char *target_str, char *delimiters);
 void free_split(struct split_t *split_ptr);
 bool free_split_r(struct split_t *p, bool ret);
 
+/**
+ * Basically it splits dynamically given string.
+ *
+ * Args:
+ *     target_str(char *): target string to be splitted
+ *     delimiters(char *): list of delimiter characters as a char pointer
+ *
+ * Returns:
+ *     splitted results as a :class:`struct split_t` type
+ */
 struct split_t split(char *target_str, char *delimiters) {
   struct split_t ret = {0, NULL};
   size_t buffer_size = DEFAULT_BUFFER_SIZE;
@@ -67,6 +48,12 @@ struct split_t split(char *target_str, char *delimiters) {
   return ret;
 }
 
+/**
+ * Deallocate any type of :class:`struct split_t` object.
+ *
+ * Args:
+ *     split_ptr(struct split_t *): target address of split_t object
+ */
 void free_split(struct split_t *split_ptr) {
   for (size_t i = 0; i < split_ptr->length; i++) {
     free(split_ptr->tokens[i]);
@@ -77,10 +64,18 @@ void free_split(struct split_t *split_ptr) {
   split_ptr->tokens = NULL;
   split_ptr->length = 0;
 }
-
-// Useful reentrant function for free_split.
-// Simply it does free any split_t object and
-// returns given return value.
+/**
+ * Reentrant function for free_split. The `_r` indicates
+ *     that. Basically it frees given split_t pointer address
+ *     (uses ``free_split``) and returns given return value.
+ *
+ * Args:
+ *     ptr(struct split_t *): target address of split_t object
+ *     ret(bool): return value as a bool
+ *
+ * Returns:
+ *     directly given ret value
+ */
 bool free_split_r(struct split_t *ptr, bool ret) {
   free_split(ptr);
   return ret;
