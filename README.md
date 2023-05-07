@@ -15,7 +15,7 @@
 Can be used on bulk IP data. You can find detailed test benchmark at below. Also see [github pages](https://www.erdoganyoksul.com/fipv/) for full package reference and documentation.
 
 ## Installation
-`fipv` can be installed easily with `pip3`. It requires `Python 3.7+`
+`fipv` can be installed easily with `pip3`. It requires `Python 3.9+`
 ```sh
 $ pip3 install fipv
 ```
