@@ -12,7 +12,7 @@ jobs:
       uses: sphinx-notes/pages@v3
       with:
         publish: false
-        sphinx_version: 7.0.0
+        sphinx_version: 6.2.1
 
     - uses: peaceiris/actions-gh-pages@v3
       with:
