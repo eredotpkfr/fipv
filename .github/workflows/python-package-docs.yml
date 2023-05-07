@@ -2,25 +2,26 @@ name: Deploy Sphinx documentation to Pages
 
 on:
   push:
-    branches: [main, 5-add-project-documentations] # branch to trigger deployment
+    branches: [main] # branch to trigger deployment
 
 jobs:
   pages:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Install C lang packages
+    - name: Install required packages
       run: |
-        pip3 install sphinx
         pip3 install -r docs/requirements.txt
-        sphinx-build docs / || true
-        pip3 install --force libclang==16.0.0
+        # the sphinx-c-autodoc library keeps throwing an error on
+        # first run. if you reinstall libclang, this problem disappears.
+        # that's why we have to build once
+        sphinx-build docs /tmp || true
+        pip3 install --force $(cat docs/requirements.txt | grep ^libclang)
 
     - id: deployment
       uses: sphinx-notes/pages@v3
       with:
         publish: false
-        sphinx_version: 6.2.1
 
     - uses: peaceiris/actions-gh-pages@v3
       with:
