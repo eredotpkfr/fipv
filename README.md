@@ -1,6 +1,7 @@
 # fipv
 [![Test](https://github.com/eredotpkfr/fipv/actions/workflows/python-package-test.yml/badge.svg)](https://github.com/eredotpkfr/fipv/actions/workflows/python-package-test.yml)
 [![PyPI](https://img.shields.io/pypi/v/fipv)](https://pypi.org/project/fipv/)
+[![Github Pages](https://img.shields.io/badge/github-pages-orange.svg)](https://www.erdoganyoksul.com/fipv/)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fipv)
 [![License: MIT](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/eredotpkfr/fipv?style=social)](https://github.com/eredotpkfr/fipv/stargazers)
@@ -11,7 +12,7 @@
 - ipv6
 - ipv6_cidr
 
-Can be used on bulk IP data. You can find detailed test benchmark at below.
+Can be used on bulk IP data. You can find detailed test benchmark at below. Also see [github pages](https://www.erdoganyoksul.com/fipv/) for full package reference and documentation.
 
 ## Installation
 `fipv` can be installed easily with `pip3`. It requires `Python 3.7+`
