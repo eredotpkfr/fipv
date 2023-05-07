@@ -8,6 +8,9 @@ jobs:
   pages:
     runs-on: ubuntu-latest
     steps:
+    - name: Install C packages
+      run: pip3 install clang libclang
+
     - id: deployment
       uses: sphinx-notes/pages@v3
       with:
