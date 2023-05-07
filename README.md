@@ -1,10 +1,10 @@
+# fipv
 [![Test](https://github.com/eredotpkfr/fipv/actions/workflows/python-package-test.yml/badge.svg)](https://github.com/eredotpkfr/fipv/actions/workflows/python-package-test.yml)
 [![PyPI](https://img.shields.io/pypi/v/fipv)](https://pypi.org/project/fipv/)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fipv)
 [![License: MIT](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/eredotpkfr/fipv?style=social)](https://github.com/eredotpkfr/fipv/stargazers)
 
-# fipv
 `fipv` (fast ip validator) is a python package build with `C` language. Simply it includes basic IP address validator functions as a `C` function, so works faster than others. Following `C` functions avaliable on this package:
 - ipv4
 - ipv4_cidr
@@ -20,22 +20,31 @@ $ pip3 install fipv
 ```
 ## Usage
 ```python
-#!/usr/bin/python3
-
 import fipv
 
 # Basic C validation functions
 print(
-    fipv.ipv4('127.0.0.1'),  # True
-    fipv.ipv4_cidr('127.0.0.1/44'),  # False
-    fipv.ipv6('::1'),  # True
-    fipv.ipv6_cidr('::1/129'),  # False
+    fipv.ipv4("127.0.0.1"),
+    fipv.ipv4_cidr("127.0.0.1/44"),
+    fipv.ipv6("::1"),
+    fipv.ipv6_cidr("::1/129"),
 )
+```
+```
+True False True False
+```
+<hr/>
+
+```python
+import fipv
 
 # Validate bulk IPv4 data
 ips = ['127.0.0.1'] * 1000000
 valids = [ip for ip in ips if fipv.ipv4(ip)]
-print(len(valids))  # 1000000
+print(len(valids))
+```
+```
+1000000
 ```
 
 ## Test Benchmark (2021-10-07)
