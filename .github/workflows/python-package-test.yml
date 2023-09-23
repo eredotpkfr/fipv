@@ -31,4 +31,4 @@ jobs:
 
     - name: Package test
       run: |
-        python tests/test.pyc
+        python tests/test.py
