@@ -6,7 +6,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/eredotpkfr/fipv?style=social)](https://github.com/eredotpkfr/fipv/stargazers)
 
-`fipv` (fast ip validator) is a python package build with `C` language. Simply it includes basic IP address validator functions as a `C` function, so works faster than others. Following `C` functions avaliable on this package:
+`fipv` (fast ip validator) stands out as a high-speed Python package meticulously built in C language. Essentially, it consolidates core IP address validation functions into a C-based implementation, ensuring unmatched speed compared to alternatives. Following C-based validator functions avaliable on this package:
 - ipv4
 - ipv4_cidr
 - ipv6
@@ -50,9 +50,6 @@ print(len(valids))
 
 ## Test Benchmark (2021-10-07)
 In this test, it was tested validation speed and average RAM usage with different python validators and different data types. Finally results saved to below table.
-
-<b>Test Duration:</b> Used linux `time` command for determine execution time of script.<br/>
-<b>Avr. RAM Usage:</b> Used linux `ps` command every `0.1` second and calculated RAM average.
 
 :green_circle: Valid :red_circle: Invalid
 <table>
