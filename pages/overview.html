@@ -211,13 +211,14 @@
 <p>Can be used on bulk IP data. You can find detailed test benchmark at below. Also see <a class="reference external" href="https://www.erdoganyoksul.com/fipv/">github pages</a> for full package reference and documentation.</p>
 <section id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="Permalink to this heading">#</a></h3>
-<p><code class="docutils literal notranslate"><span class="pre">fipv</span></code> can be installed easily with <code class="docutils literal notranslate"><span class="pre">pip3</span></code>. It requires <code class="docutils literal notranslate"><span class="pre">Python</span> <span class="pre">3.9+</span></code></p>
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>pip3<span class="w"> </span>install<span class="w"> </span>fipv
 </pre></div>
 </div>
 </section>
 <section id="usage">
 <h3>Usage<a class="headerlink" href="#usage" title="Permalink to this heading">#</a></h3>
+<section id="basic-validation">
+<h4>Basic Validation<a class="headerlink" href="#basic-validation" title="Permalink to this heading">#</a></h4>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fipv</span>
 
 <span class="c1"># Basic C validation functions</span>
@@ -227,22 +228,26 @@
     <span class="n">fipv</span><span class="o">.</span><span class="n">ipv6</span><span class="p">(</span><span class="s2">&quot;::1&quot;</span><span class="p">),</span>
     <span class="n">fipv</span><span class="o">.</span><span class="n">ipv6_cidr</span><span class="p">(</span><span class="s2">&quot;::1/129&quot;</span><span class="p">),</span>
 <span class="p">)</span>
+
+<span class="c1"># Output</span>
+<span class="c1"># True False True False</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="kc">True</span> <span class="kc">False</span> <span class="kc">True</span> <span class="kc">False</span>
-</pre></div>
-</div>
-<hr/><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fipv</span>
+</section>
+<section id="bulk-validation">
+<h4>Bulk Validation<a class="headerlink" href="#bulk-validation" title="Permalink to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">fipv</span>
 
 <span class="c1"># Validate bulk IPv4 data</span>
 <span class="n">ips</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;127.0.0.1&#39;</span><span class="p">]</span> <span class="o">*</span> <span class="mi">1000000</span>
 <span class="n">valids</span> <span class="o">=</span> <span class="p">[</span><span class="n">ip</span> <span class="k">for</span> <span class="n">ip</span> <span class="ow">in</span> <span class="n">ips</span> <span class="k">if</span> <span class="n">fipv</span><span class="o">.</span><span class="n">ipv4</span><span class="p">(</span><span class="n">ip</span><span class="p">)]</span>
 <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">valids</span><span class="p">))</span>
+
+<span class="c1"># Output</span>
+<span class="c1"># 1000000</span>
 </pre></div>
 </div>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mi">1000000</span>
-</pre></div>
-</div>
+</section>
 </section>
 <section id="test-benchmark-2021-10-07">
 <h3>Test Benchmark (2021-10-07)<a class="headerlink" href="#test-benchmark-2021-10-07" title="Permalink to this heading">#</a></h3>
@@ -571,7 +576,11 @@ Mail - <a class="reference external" href="mailto:erdoganyoksul3&#37;&#52;&#48;g
 <li><a class="reference internal" href="#">Overview</a><ul>
 <li><a class="reference internal" href="#fipv">fipv</a><ul>
 <li><a class="reference internal" href="#installation">Installation</a></li>
-<li><a class="reference internal" href="#usage">Usage</a></li>
+<li><a class="reference internal" href="#usage">Usage</a><ul>
+<li><a class="reference internal" href="#basic-validation">Basic Validation</a></li>
+<li><a class="reference internal" href="#bulk-validation">Bulk Validation</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#test-benchmark-2021-10-07">Test Benchmark (2021-10-07)</a></li>
 <li><a class="reference internal" href="#contact">Contact</a></li>
 </ul>
