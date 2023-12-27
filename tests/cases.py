@@ -5,6 +5,7 @@ Test cases listed in this file
 """
 
 IPV4_CASES = {
+    "0.0.0.0": True,
     "127.0.0.1": True,
     "10.0.0.0": True,
     "123.5.77.88": True,
@@ -33,6 +34,7 @@ IPV4_CASES = {
 }
 
 IPV4_CIDR_CASES = {
+    "0.0.0.0/0": True,
     "127.0.0.1/0": True,
     "123.5.77.88/8": True,
     "12.12.12.12/32": True,
