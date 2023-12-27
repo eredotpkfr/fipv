@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/eredotpkfr/fipv?style=social)](https://github.com/eredotpkfr/fipv/stargazers)
 # fipv
-🚀 **`fipv` (fast İP validator)** fipv (fast ip validator) stands out as a high-speed Python package meticulously built in C language 🤙 It elegantly consolidates core IP address validation functions into a robust C-based implementation, ensuring unparalleled speed compared to alternatives
+🚀 **`fipv` (fast ip validator)** stands out as a high-speed Python package meticulously built in C language 🤙 It elegantly consolidates core IP address validation functions into a robust C-based implementation, ensuring unparalleled speed compared to alternatives
 
 🎯 **Key Features:**
 -  **ipv4** - Validates IPv4 addresses
