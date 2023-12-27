@@ -15,11 +15,11 @@
 Can be used on bulk IP data. You can find detailed test benchmark at below. Also see [github pages](https://www.erdoganyoksul.com/fipv/) for full package reference and documentation.
 
 ## Installation
-`fipv` can be installed easily with `pip3`. It requires `Python 3.9+`
 ```sh
 $ pip3 install fipv
 ```
 ## Usage
+### Basic Validation
 ```python
 import fipv
 
@@ -30,12 +30,11 @@ print(
     fipv.ipv6("::1"),
     fipv.ipv6_cidr("::1/129"),
 )
-```
-```
-True False True False
-```
-<hr/>
 
+# Output
+# True False True False
+```
+### Bulk Validation
 ```python
 import fipv
 
@@ -43,9 +42,9 @@ import fipv
 ips = ['127.0.0.1'] * 1000000
 valids = [ip for ip in ips if fipv.ipv4(ip)]
 print(len(valids))
-```
-```
-1000000
+
+# Output
+# 1000000
 ```
 
 ## Test Benchmark (2021-10-07)
