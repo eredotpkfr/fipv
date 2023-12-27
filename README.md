@@ -1,18 +1,23 @@
-# fipv
 [![Test](https://github.com/eredotpkfr/fipv/actions/workflows/python-package-test.yml/badge.svg)](https://github.com/eredotpkfr/fipv/actions/workflows/python-package-test.yml)
 [![PyPI](https://img.shields.io/pypi/v/fipv)](https://pypi.org/project/fipv/)
 [![Github Pages](https://img.shields.io/badge/github-pages-orange.svg)](https://www.erdoganyoksul.com/fipv/)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fipv)
 [![License: MIT](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/eredotpkfr/fipv?style=social)](https://github.com/eredotpkfr/fipv/stargazers)
+# fipv
+🚀 **fipv (fast İP validator)** fipv (fast ip validator) stands out as a high-speed Python package meticulously built in C language 🤙 It elegantly consolidates core IP address validation functions into a robust C-based implementation, ensuring unparalleled speed compared to alternatives
 
-`fipv` (fast ip validator) stands out as a high-speed Python package meticulously built in C language. Essentially, it consolidates core IP address validation functions into a C-based implementation, ensuring unmatched speed compared to alternatives. Following C-based validator functions avaliable on this package:
-- ipv4
-- ipv4_cidr
-- ipv6
-- ipv6_cidr
+🎯 **Key Features:**
+-  **ipv4** - Validates IPv4 addresses
+-  **ipv4_cidr** - Validates IPv4 addresses with CIDR notation
+-  **ipv6** - Validates IPv6 addresses
+-  **ipv6_cidr** - Validates IPv6 addresses with CIDR notation
 
-Can be used on bulk IP data. You can find detailed test benchmark at below. Also see [github pages](https://www.erdoganyoksul.com/fipv/) for full package reference and documentation.
+⚡ **Efficiency and Performance:**
+The C-based implementation of `fipv` guarantees exceptional speed, making it a top choice for high-performance IP address validation in Python applications
+
+📚 **Documentation:**
+See [github pages](https://www.erdoganyoksul.com/fipv/) for the documentation and package reference
 
 ## Installation
 ```sh
