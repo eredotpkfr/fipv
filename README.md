@@ -53,7 +53,7 @@ print(len(valids))
 ## Test Benchmark (2021-10-07)
 In this test, it was tested validation speed and average RAM usage with different python validators and different data types. Finally results saved to below table.
 
-:green_circle: Valid :red_circle: Invalid
+🟢 Valid 🔴 Invalid
 <table>
   <thead>
     <tr>
@@ -69,7 +69,7 @@ In this test, it was tested validation speed and average RAM usage with differen
   <tbody>
     <tr>
       <th align="center" rowspan="3" scope="rowgroup">1</th>
-      <th align="center" scope="row">:green_circle:</th>
+      <th align="center" scope="row">🟢</th>
       <td align="center">500K</td>
       <td align="center" rowspan="3">1M</td>
       <td align="center" rowspan="3">IPv4</td>
@@ -80,7 +80,7 @@ In this test, it was tested validation speed and average RAM usage with differen
       <td align="center">85M</td>
     </tr>
     <tr>
-      <th align="center" scope="row">:red_circle:</th>
+      <th align="center" scope="row">🔴</th>
       <td align="center">500K</td>
       <td align="center">
         <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
@@ -99,7 +99,7 @@ In this test, it was tested validation speed and average RAM usage with differen
   <tbody>
     <tr>
       <th align="center" rowspan="3" scope="rowgroup">2</th>
-      <th align="center" scope="row">:green_circle:</th>
+      <th align="center" scope="row">🟢</th>
       <td align="center">1M</td>
       <td align="center" rowspan="3">2M</td>
       <td align="center" rowspan="3">IPv4</td>
@@ -110,7 +110,7 @@ In this test, it was tested validation speed and average RAM usage with differen
       <td align="center">151M</td>
     </tr>
     <tr>
-      <th align="center" scope="row">:red_circle:</th>
+      <th align="center" scope="row">🔴</th>
       <td align="center">1M</td>
       <td align="center">
         <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
@@ -129,7 +129,7 @@ In this test, it was tested validation speed and average RAM usage with differen
   <tbody>
     <tr>
       <th align="center" rowspan="3" scope="rowgroup">3</th>
-      <th align="center" scope="row">:green_circle:</th>
+      <th align="center" scope="row">🟢</th>
       <td align="center">500K</td>
       <td align="center" rowspan="3">1M</td>
       <td align="center" rowspan="3">IPv4 CIDR</td>
@@ -140,7 +140,7 @@ In this test, it was tested validation speed and average RAM usage with differen
       <td align="center">96M</td>
     </tr>
     <tr>
-      <th align="center" scope="row">:red_circle:</th>
+      <th align="center" scope="row">🔴</th>
       <td align="center">500K</td>
       <td align="center">
         <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
@@ -159,7 +159,7 @@ In this test, it was tested validation speed and average RAM usage with differen
   <tbody>
     <tr>
       <th align="center" rowspan="3" scope="rowgroup">4</th>
-      <th align="center" scope="row">:green_circle:</th>
+      <th align="center" scope="row">🟢</th>
       <td align="center">1M</td>
       <td align="center" rowspan="3">2M</td>
       <td align="center" rowspan="3">IPv4 CIDR</td>
@@ -170,7 +170,7 @@ In this test, it was tested validation speed and average RAM usage with differen
       <td align="center">179M</td>
     </tr>
     <tr>
-      <th align="center" scope="row">:red_circle:</th>
+      <th align="center" scope="row">🔴</th>
       <td align="center">1M</td>
       <td align="center">
         <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
@@ -189,7 +189,7 @@ In this test, it was tested validation speed and average RAM usage with differen
   <tbody>
     <tr>
       <th align="center" rowspan="3" scope="rowgroup">5</th>
-      <th align="center" scope="row">:green_circle:</th>
+      <th align="center" scope="row">🟢</th>
       <td align="center">500K</td>
       <td align="center" rowspan="3">1M</td>
       <td align="center" rowspan="3">IPv6</td>
@@ -200,7 +200,7 @@ In this test, it was tested validation speed and average RAM usage with differen
       <td align="center">96M</td>
     </tr>
     <tr>
-      <th align="center" scope="row">:red_circle:</th>
+      <th align="center" scope="row">🔴</th>
       <td align="center">500K</td>
       <td align="center">
         <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
@@ -219,7 +219,7 @@ In this test, it was tested validation speed and average RAM usage with differen
   <tbody>
     <tr>
       <th align="center" rowspan="3" scope="rowgroup">6</th>
-      <th align="center" scope="row">:green_circle:</th>
+      <th align="center" scope="row">🟢</th>
       <td align="center">1M</td>
       <td align="center" rowspan="3">2M</td>
       <td align="center" rowspan="3">IPv6</td>
@@ -230,7 +230,7 @@ In this test, it was tested validation speed and average RAM usage with differen
       <td align="center">183M</td>
     </tr>
     <tr>
-      <th align="center" scope="row">:red_circle:</th>
+      <th align="center" scope="row">🔴</th>
       <td align="center">1M</td>
       <td align="center">
         <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
@@ -249,7 +249,7 @@ In this test, it was tested validation speed and average RAM usage with differen
   <tbody>
     <tr>
       <th align="center" rowspan="3" scope="rowgroup">7</th>
-      <th align="center" scope="row">:green_circle:</th>
+      <th align="center" scope="row">🟢</th>
       <td align="center">500K</td>
       <td align="center" rowspan="3">1M</td>
       <td align="center" rowspan="3">IPv6 CIDR</td>
@@ -260,7 +260,7 @@ In this test, it was tested validation speed and average RAM usage with differen
       <td align="center">99M</td>
     </tr>
     <tr>
-      <th align="center" scope="row">:red_circle:</th>
+      <th align="center" scope="row">🔴</th>
       <td align="center">500K</td>
       <td align="center">
         <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
@@ -279,7 +279,7 @@ In this test, it was tested validation speed and average RAM usage with differen
   <tbody>
     <tr>
       <th align="center" rowspan="3" scope="rowgroup">8</th>
-      <th align="center" scope="row">:green_circle:</th>
+      <th align="center" scope="row">🟢</th>
       <td align="center">1M</td>
       <td align="center" rowspan="3">2M</td>
       <td align="center" rowspan="3">IPv6 CIDR</td>
@@ -290,7 +290,7 @@ In this test, it was tested validation speed and average RAM usage with differen
       <td align="center">184M</td>
     </tr>
     <tr>
-      <th align="center" scope="row">:red_circle:</th>
+      <th align="center" scope="row">🔴</th>
       <td align="center">1M</td>
       <td align="center">
         <a href="https://docs.python.org/3/library/ipaddress.html" target="_blank">ipaddress</a>
