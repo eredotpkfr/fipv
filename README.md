@@ -51,7 +51,7 @@ print(len(valids))
 ```
 
 ## Test Benchmark (2021-10-07)
-In this test, it was tested validation speed and average RAM usage with different python validators and different data types. Finally results saved to below table.
+In this test, it was tested validation speed and average RAM usage with different python validators and different data types. Finally results saved to below table
 
 🟢 Valid 🔴 Invalid
 <table>
