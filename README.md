@@ -5,19 +5,17 @@
 [![License: MIT](https://img.shields.io/badge/license-MIT-informational.svg)](https://opensource.org/licenses/MIT)
 [![Stars](https://img.shields.io/github/stars/eredotpkfr/fipv?style=social)](https://github.com/eredotpkfr/fipv/stargazers)
 # fipv
-🚀 **`fipv` (fast ip validator)** stands out as a high-speed Python package meticulously built in C language 🤙 It elegantly consolidates core IP address validation functions into a robust C-based implementation, ensuring unparalleled speed compared to alternatives
+It stands out as a high-speed Python package meticulously built in C language 🤙 It elegantly consolidates core IP address validation functions into a robust C-based implementation, ensuring unparalleled speed compared to alternatives
 
-🎯 **Key Features:**
--  **ipv4** - Validates IPv4 addresses
--  **ipv4_cidr** - Validates IPv4 addresses with CIDR notation
--  **ipv6** - Validates IPv6 addresses
--  **ipv6_cidr** - Validates IPv6 addresses with CIDR notation
+🎯 **Key Features**
+- 🚀 **Efficiency and Performance:** The C-based implementation of `fipv` guarantees exceptional speed and minimal RAM usage, making it a top choice for high-performance IP address validation in Python applications
+- 📚 **Simplified Usage:** Explore [github pages](https://www.erdoganyoksul.com/fipv/) for easy-to-follow documentation and package references
 
-⚡ **Efficiency and Performance:**
-The C-based implementation of `fipv` guarantees exceptional speed, making it a top choice for high-performance IP address validation in Python applications
-
-📚 **Documentation:**
-See [github pages](https://www.erdoganyoksul.com/fipv/) for the documentation and package reference
+⚡ **Available Validators**
+- IPv4
+- IPv4 CIDR
+- IPv6
+- IPv6 CIDR
 
 ## Installation
 ```sh
