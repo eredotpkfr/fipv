@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 """
-Test cases listed in this file
+Test cases listed in this file.
 """
 
-IPV4_CASES = {
+IPV4_CASES: dict[str, bool] = {
     "0.0.0.0": True,
     "127.0.0.1": True,
     "10.0.0.0": True,
@@ -33,7 +33,7 @@ IPV4_CASES = {
     "    ": False,
 }
 
-IPV4_CIDR_CASES = {
+IPV4_CIDR_CASES: dict[str, bool] = {
     "0.0.0.0/0": True,
     "127.0.0.1/0": True,
     "123.5.77.88/8": True,
@@ -60,7 +60,7 @@ IPV4_CIDR_CASES = {
     "foo/bar": False,
 }
 
-IPV6_CASES = {
+IPV6_CASES: dict[str, bool] = {
     "::1": True,
     "2002::": True,
     "dead:beef:0:0:0:0:42:1": True,
@@ -82,7 +82,7 @@ IPV6_CASES = {
     "deag:beef:0:0:0:0:42:1": False,
 }
 
-IPV6_CIDR_CASES = {
+IPV6_CIDR_CASES: dict[str, bool] = {
     "::1/0": True,
     "2002::/12": True,
     "dead:beef:0:0:0:0:42:1/8": True,

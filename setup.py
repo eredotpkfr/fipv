@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 
 """
-Module installation file
+Module installation file.
 """
 
 from setuptools import Extension, setup
