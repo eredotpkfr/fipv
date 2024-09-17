@@ -31,7 +31,6 @@ jobs:
 
     - name: Install package
       run: |
-        pip3 install -U setuptools
         python setup.py install
 
     - name: Package test
