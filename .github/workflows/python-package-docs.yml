@@ -12,8 +12,8 @@ jobs:
   build-docs:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
       - name: Install required packages
-        uses: actions/checkout@v4
         run: pip3 install -r docs/requirements.txt
 
       - name: Build docs
@@ -22,8 +22,8 @@ jobs:
   pages:
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@v4
     - name: Install required packages
-      uses: actions/checkout@v4
       run: |
         pip3 install -r docs/requirements.txt
         # the sphinx-c-autodoc library keeps throwing an error on
