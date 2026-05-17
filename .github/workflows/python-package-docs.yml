@@ -16,7 +16,7 @@ jobs:
       - name: Install required packages
         run: |
           python3 -m pip uninstall -y clang libclang || true
-          python3 -m pip install --force-reinstall -r docs/requirements.txt
+          python3 -m pip install --force-reinstall --no-cache-dir -r docs/requirements.txt
 
       - name: Build docs
         run: sphinx-build docs /tmp
