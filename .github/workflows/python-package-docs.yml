@@ -14,7 +14,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install required packages
-        run: python3 -m pip install -r docs/requirements.txt
+        run: |
+          python3 -m pip uninstall -y clang libclang || true
+          python3 -m pip install -r docs/requirements.txt
 
       - name: Build docs
         run: sphinx-build docs /tmp
