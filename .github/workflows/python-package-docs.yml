@@ -22,9 +22,8 @@ jobs:
         sphinx-build docs /tmp || true
         python3 -m pip install --force $(cat docs/requirements.txt | grep ^libclang)
 
-    - id: deployment
+    - id: build
       uses: sphinx-notes/pages@v3
-      if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
       with:
         publish: false
 
@@ -33,4 +32,4 @@ jobs:
       if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ${{ steps.deployment.outputs.artifact }}
+        publish_dir: ${{ steps.build.outputs.artifact }}
