@@ -9,31 +9,18 @@ on:
       - main
 
 jobs:
-  build-docs:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - name: Install required packages
-        run: |
-          pip uninstall -y clang libclang || true
-          python3 -m pip uninstall -y clang libclang || true
-          python3 -m pip install --force-reinstall --no-cache-dir -r docs/requirements.txt
-
-      - name: Build docs
-        run: sphinx-build docs /tmp
-
   pages:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     - name: Install required packages
       run: |
-        pip3 install -r docs/requirements.txt
+        python3 -m pip install -r docs/requirements.txt
         # the sphinx-c-autodoc library keeps throwing an error on
         # first run. if you reinstall libclang, this problem disappears.
         # that's why we have to build once
         sphinx-build docs /tmp || true
-        pip3 install --force $(cat docs/requirements.txt | grep ^libclang)
+        python3 -m pip install --force $(cat docs/requirements.txt | grep ^libclang)
 
     - id: deployment
       uses: sphinx-notes/pages@v3
