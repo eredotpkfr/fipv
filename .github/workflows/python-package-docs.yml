@@ -15,6 +15,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Install required packages
         run: |
+          pip uninstall -y clang libclang || true
           python3 -m pip uninstall -y clang libclang || true
           python3 -m pip install --force-reinstall --no-cache-dir -r docs/requirements.txt
 
