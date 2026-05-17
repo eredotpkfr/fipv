@@ -1,15 +1,29 @@
-name: Deploy Sphinx documentation to Pages
+name: Deploy Sphinx documentation to Github Pages
 
 on:
   push:
-    branches: [main] # branch to trigger deployment
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
+  build-docs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install required packages
+        uses: actions/checkout@v4
+        run: pip3 install -r docs/requirements.txt
+
+      - name: Build docs
+        run: sphinx-build docs /tmp
+
   pages:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
     - name: Install required packages
+      uses: actions/checkout@v4
       run: |
         pip3 install -r docs/requirements.txt
         # the sphinx-c-autodoc library keeps throwing an error on
@@ -20,10 +34,13 @@ jobs:
 
     - id: deployment
       uses: sphinx-notes/pages@v3
+      if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
       with:
         publish: false
 
-    - uses: peaceiris/actions-gh-pages@v3
+    - name: Deploy to pages
+      uses: peaceiris/actions-gh-pages@v3
+      if: ${{ github.event_name == 'push' && github.ref_name == 'main' }}
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ${{ steps.deployment.outputs.artifact }}
