@@ -6,20 +6,22 @@
 # separate terms of service, privacy policy, and support
 # documentation.
 
-name: Upload Python Package
+name: Publish Package
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   deploy:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
-
     - name: Set up Python
       uses: actions/setup-python@v6
       with:
@@ -32,6 +34,7 @@ jobs:
 
     - name: Publish package
       uses: pypa/gh-action-pypi-publish@27b31702a0e7fc50959f5ad993c78deac1bdfc29
+      if: github.event_name == 'release'
       with:
         user: __token__
         password: ${{ secrets.PYPI_API_TOKEN }}
