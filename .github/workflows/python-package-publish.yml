@@ -35,7 +35,7 @@ jobs:
         python setup.py sdist
 
     - name: Publish package
-      uses: pypa/gh-action-pypi-publish@cef221092ed1bacb1cc03d23a2d87d1d172e277b
+      uses: pypa/gh-action-pypi-publish@ba38be9e461d3875417946c167d0b5f3d385a247
       if: github.event_name == 'release'
       with:
         user: __token__
