@@ -6,7 +6,7 @@
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>include/utils.h - fipv 1.0.2 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=acfd86a5" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
     
@@ -228,7 +228,7 @@
 <span></span><span class="cp">#ifndef _UTILS_H_</span>
 <div class="viewcode-block" id="c._UTILS_H_"><span class="cp">#define _UTILS_H_</span></div>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ctype.h&gt;</span><span class="c1"> /* for isdigit and isxdigit */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ctype.h&gt;</span><span class="w"> </span><span class="cm">/* for isdigit and isxdigit */</span>
 
 <span class="kt">bool</span><span class="w"> </span><span class="nf">is_digit</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">target_str</span><span class="p">);</span>
 <span class="kt">bool</span><span class="w"> </span><span class="nf">is_xdigit</span><span class="p">(</span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">target_str</span><span class="p">);</span>
@@ -305,8 +305,8 @@
 <span class="p">}</span></div>
 
 <div class="viewcode-block" id="c.blanks"><a class="viewcode-back" href="../../pages/reference.html#c.blanks">[docs]</a><span class="cm">/**</span>
-<span class="cm"> * Definition of `blank` is python empty string (``&#39;&#39;``). If you split ``..``</span>
-<span class="cm"> *     with ``.`` in python, you get 3 empty string (``[&#39;&#39;, &#39;&#39;, &#39;&#39;]``)</span>
+<span class="cm"> * Definition of `blank` is python empty string (``''``). If you split ``..``</span>
+<span class="cm"> *     with ``.`` in python, you get 3 empty string (``['', '', '']``)</span>
 <span class="cm"> *     simply blanks function counts these empty strings.</span>
 <span class="cm"> *</span>
 <span class="cm"> * Args:</span>

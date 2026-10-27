@@ -6,7 +6,7 @@
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>fipv/fipv.c - fipv 1.0.2 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=acfd86a5" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
     
@@ -234,10 +234,10 @@
 <span class="cm"> */</span>
 
 <div class="viewcode-block" id="c.PY_SSIZE_T_CLEAN"><span class="cp">#define PY_SSIZE_T_CLEAN</span></div>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Python.h&gt;</span><span class="c1"> /* For python integration */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Python.h&gt;</span><span class="w"> </span><span class="cm">/* For python integration */</span>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;validators/ipv4.h&quot;</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;validators/ipv6.h&quot;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"validators/ipv4.h"</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">"validators/ipv6.h"</span>
 
 <span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="nf">ipv4</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">args</span><span class="p">);</span>
 <span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="nf">ipv4_cidr</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">args</span><span class="p">);</span>
@@ -260,7 +260,7 @@
 <span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="nf">ipv4</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ipv4_addr</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;s&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ipv4_addr</span><span class="p">))</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">"s"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ipv4_addr</span><span class="p">))</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">is_ipv4</span><span class="p">(</span><span class="n">ipv4_addr</span><span class="p">))</span>
@@ -284,7 +284,7 @@
 <span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="nf">ipv4_cidr</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ipv4_addr_cidr</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;s&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ipv4_addr_cidr</span><span class="p">))</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">"s"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ipv4_addr_cidr</span><span class="p">))</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">is_ipv4_cidr</span><span class="p">(</span><span class="n">ipv4_addr_cidr</span><span class="p">))</span>
@@ -308,7 +308,7 @@
 <span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="nf">ipv6</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ipv6_addr</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;s&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ipv6_addr</span><span class="p">))</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">"s"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ipv6_addr</span><span class="p">))</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">is_ipv6</span><span class="p">(</span><span class="n">ipv6_addr</span><span class="p">))</span>
@@ -332,7 +332,7 @@
 <span class="k">static</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="nf">ipv6_cidr</span><span class="p">(</span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">self</span><span class="p">,</span><span class="w"> </span><span class="n">PyObject</span><span class="w"> </span><span class="o">*</span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="n">ipv6_addr_cidr</span><span class="p">;</span>
 
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;s&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ipv6_addr_cidr</span><span class="p">))</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">PyArg_ParseTuple</span><span class="p">(</span><span class="n">args</span><span class="p">,</span><span class="w"> </span><span class="s">"s"</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ipv6_addr_cidr</span><span class="p">))</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
 
 <span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">is_ipv6_cidr</span><span class="p">(</span><span class="n">ipv6_addr_cidr</span><span class="p">))</span>
@@ -342,17 +342,17 @@
 <span class="p">}</span></div>
 
 <div class="viewcode-block" id="c.ModuleFuncs"><span class="k">static</span><span class="w"> </span><span class="n">PyMethodDef</span><span class="w"> </span><span class="n">ModuleFuncs</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span></div>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;ipv4&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="n">METH_VARARGS</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Validate IPv4&quot;</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;ipv6&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ipv6</span><span class="p">,</span><span class="w"> </span><span class="n">METH_VARARGS</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Validate IPv6&quot;</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;ipv4_cidr&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ipv4_cidr</span><span class="p">,</span><span class="w"> </span><span class="n">METH_VARARGS</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Validate IPv4CIDR&quot;</span><span class="p">},</span>
-<span class="w">    </span><span class="p">{</span><span class="s">&quot;ipv6_cidr&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">ipv6_cidr</span><span class="p">,</span><span class="w"> </span><span class="n">METH_VARARGS</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Validate IPv6CIDR&quot;</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">"ipv4"</span><span class="p">,</span><span class="w"> </span><span class="n">ipv4</span><span class="p">,</span><span class="w"> </span><span class="n">METH_VARARGS</span><span class="p">,</span><span class="w"> </span><span class="s">"Validate IPv4"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">"ipv6"</span><span class="p">,</span><span class="w"> </span><span class="n">ipv6</span><span class="p">,</span><span class="w"> </span><span class="n">METH_VARARGS</span><span class="p">,</span><span class="w"> </span><span class="s">"Validate IPv6"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">"ipv4_cidr"</span><span class="p">,</span><span class="w"> </span><span class="n">ipv4_cidr</span><span class="p">,</span><span class="w"> </span><span class="n">METH_VARARGS</span><span class="p">,</span><span class="w"> </span><span class="s">"Validate IPv4CIDR"</span><span class="p">},</span>
+<span class="w">    </span><span class="p">{</span><span class="s">"ipv6_cidr"</span><span class="p">,</span><span class="w"> </span><span class="n">ipv6_cidr</span><span class="p">,</span><span class="w"> </span><span class="n">METH_VARARGS</span><span class="p">,</span><span class="w"> </span><span class="s">"Validate IPv6CIDR"</span><span class="p">},</span>
 <span class="w">    </span><span class="p">{</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">}</span><span class="w"> </span><span class="cm">/* Sentinel */</span>
 <span class="p">};</span>
 
 <div class="viewcode-block" id="c.PyModuleDef"><div class="viewcode-block" id="c.fipv"><span class="k">static</span><span class="w"> </span><span class="k">struct</span><span class="w"> </span><span class="nc">PyModuleDef</span><span class="w"> </span><span class="n">fipv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span></div></div>
 <span class="w">    </span><span class="n">PyModuleDef_HEAD_INIT</span><span class="p">,</span>
-<span class="w">    </span><span class="s">&quot;fipv&quot;</span><span class="p">,</span>
-<span class="w">    </span><span class="s">&quot;Fast IP validator with C language as a python module&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"fipv"</span><span class="p">,</span>
+<span class="w">    </span><span class="s">"Fast IP validator with C language as a python module"</span><span class="p">,</span>
 <span class="w">    </span><span class="mi">-1</span><span class="p">,</span>
 <span class="w">    </span><span class="n">ModuleFuncs</span><span class="p">,</span>
 <span class="p">};</span>

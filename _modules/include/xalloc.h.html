@@ -6,7 +6,7 @@
 
     <!-- Generated with Sphinx 9.1.0 and Furo 2025.12.19 -->
         <title>include/xalloc.h - fipv 1.0.2 documentation</title>
-      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=acfd86a5" />
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=d111a655" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo.css?v=7bdb33bb" />
     <link rel="stylesheet" type="text/css" href="../../_static/styles/furo-extensions.css?v=8dab3a3b" />
     
@@ -229,9 +229,9 @@
 <div class="viewcode-block" id="c._XALLOC_H_"><span class="cp">#define _XALLOC_H_</span></div>
 
 <span class="c1">// printed error message when allocation is failed.</span>
-<div class="viewcode-block" id="c.MEMORY_ERR"><span class="cp">#define MEMORY_ERR &quot;Out of memory!\n&quot;</span></div>
+<div class="viewcode-block" id="c.MEMORY_ERR"><span class="cp">#define MEMORY_ERR "Out of memory!\n"</span></div>
 
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="c1"> /* for allocating operations */</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="w"> </span><span class="cm">/* for allocating operations */</span>
 
 <span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">xmem_err</span><span class="p">(</span><span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="n">p</span><span class="p">);</span>
 <span class="kt">void</span><span class="w"> </span><span class="o">*</span><span class="nf">xmalloc</span><span class="p">(</span><span class="kt">size_t</span><span class="w"> </span><span class="n">size</span><span class="p">);</span>
