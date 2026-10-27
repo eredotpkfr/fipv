@@ -13,18 +13,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v7
+
+    - name: Set up Python
+      uses: actions/setup-python@v7
+      with:
+        python-version: '3.x'
+
     - name: Install required packages
       run: |
-        python3 -m pip install -r docs/requirements.txt
+        python -m pip install -r docs/requirements.txt
         # the sphinx-c-autodoc library keeps throwing an error on
         # first run. if you reinstall libclang, this problem disappears.
         # that's why we have to build once
         sphinx-build docs /tmp || true
-        python3 -m pip install --force $(cat docs/requirements.txt | grep ^libclang)
+        python -m pip install --force $(cat docs/requirements.txt | grep ^libclang)
 
     - id: build
       uses: sphinx-notes/pages@v3
       with:
+        python_version: '3.14'
         publish: false
 
     - name: Deploy to pages
